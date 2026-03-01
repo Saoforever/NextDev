@@ -140,3 +140,63 @@ color:#555;
 max-width:700px;
 margin:auto;
 }
+
+.card-bg {
+    background-image: url('images/357.jpg');  /* your image path */
+    background-size: cover;       /* fills the card without stretching */
+    background-position: center;  /* center the image inside the card */
+    background-repeat: no-repeat;
+    width: 280px;                 /* same width as other cards */
+    height: 280px;                /* fixed height to match other cards */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    display: flex;                /* optional: for text overlay */
+    flex-direction: column;
+    justify-content: flex-end;    /* push text to bottom */
+    padding: 20px;
+    color: rgb(0, 0, 0);                 /* text color on top of image */
+    text-align: center;
+}
+
+.card-bg {
+    background-image: url('images/45702.jpg');  /* your image path */
+    background-size: cover;       /* fills the card without stretching */
+    background-position: center;  /* center the image inside the card */
+    background-repeat: no-repeat;
+    width: 280px;                 /* same width as other cards */
+    height: 280px;                /* fixed height to match other cards */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    display: flex;                /* optional: for text overlay */
+    flex-direction: column;
+    justify-content: flex-end;    /* push text to bottom */
+    padding: 20px;
+    color: rgb(0, 0, 0);                 /* text color on top of image */
+    text-align: center;
+}
+
+.card-bg {
+    background-image: url('images/2032.jpg');  /* your image path */
+    background-size: cover;       /* fills the card without stretching */
+    background-position: center;  /* center the image inside the card */
+    background-repeat: no-repeat;
+    width: 280px;                 /* same width as other cards */
+    height: 280px;                /* fixed height to match other cards */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    display: flex;                /* optional: for text overlay */
+    flex-direction: column;
+    justify-content: flex-end;    /* push text to bottom */
+    padding: 20px;
+    color: rgb(0, 0, 0);                 /* text color on top of image */
+    text-align: center;
+}
+
+/* Ensure images stay contained inside cards */
+.card {
+    position: relative;          /* needed for contained content */
+    display: flex;
+    flex-direction: column;      /* stack image + text */
+    justify-content: flex-start; /* text stays below image */
+    overflow: hidden;            /* prevents image from spilling outside card */
+}
