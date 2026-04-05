@@ -206,55 +206,55 @@ max-width:700px;
 margin:auto;
 }
 
-.card-bg {
-    background-image: url('images/357.jpg');  /* your image path */
-    background-size: cover;       /* fills the card without stretching */
-    background-position: center;  /* center the image inside the card */
+/* Card Backgrounds */
+.card-bg-1 {
+    background-image: url('images/2032.jpg');
+}
+
+.card-bg-2 {
+    background-image: url('images/357.jpg');
+}
+
+.card-bg-3 {
+    background-image: url('images/45702.jpg');
+}
+
+/* Shared styling for all cards */
+.card-bg-1, .card-bg-2, .card-bg-3 {
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    width: 280px;                 /* same width as other cards */
-    height: 280px;                /* fixed height to match other cards */
+    width: 300px;              /* fixed width */
+    height: 450px;             /* fixed height for all cards */
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    display: flex;                /* optional: for text overlay */
+    display: flex;
     flex-direction: column;
-    justify-content: flex-end;    /* push text to bottom */
+    justify-content: flex-end;  /* keep text at bottom */
     padding: 20px;
-    color: rgb(0, 0, 0);                 /* text color on top of image */
+    color: rgb(0,0,0);
     text-align: center;
 }
 
-.card-bg {
-    background-image: url('images/45702.jpg');  /* your image path */
-    background-size: cover;       /* fills the card without stretching */
-    background-position: center;  /* center the image inside the card */
-    background-repeat: no-repeat;
-    width: 280px;                 /* same width as other cards */
-    height: 280px;                /* fixed height to match other cards */
+/* Card text overlay in negative area */
+.card-text {
+    background: rgba(255, 255, 255, 0.75); /* semi-transparent background */
+    padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    display: flex;                /* optional: for text overlay */
-    flex-direction: column;
-    justify-content: flex-end;    /* push text to bottom */
-    padding: 20px;
-    color: rgb(0, 0, 0);                 /* text color on top of image */
-    text-align: center;
+    text-align: center;  /* centers text horizontally */
+    width: 100%;
+    margin-bottom: 10px; /* optional spacing from card bottom */
 }
 
-.card-bg {
-    background-image: url('images/2032.jpg');  /* your image path */
-    background-size: cover;       /* fills the card without stretching */
-    background-position: center;  /* center the image inside the card */
-    background-repeat: no-repeat;
-    width: 280px;                 /* same width as other cards */
-    height: 280px;                /* fixed height to match other cards */
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    display: flex;                /* optional: for text overlay */
+/* Make all text-only cards same height */
+.card-text-only {
+    min-height: 240px;   /* same height as your image cards */
+    display: flex;
     flex-direction: column;
-    justify-content: flex-end;    /* push text to bottom */
-    padding: 20px;
-    color: rgb(0, 0, 0);                 /* text color on top of image */
+    justify-content: center; /* vertically center the text */
+    align-items: center;     /* horizontally center the text */
     text-align: center;
+    padding: 20px;
 }
 
 /* Ensure images stay contained inside cards */
