@@ -1,7 +1,5 @@
 /* External CSS */
-body{
-background:red;
-}
+
 * {
     margin: 0;
     padding: 0;
@@ -18,6 +16,14 @@ body {
 img {
 max-width:100%;
 height:auto;
+}
+
+.card-img{
+transition:transform 0.3s ease;
+}
+
+.card:hover .card-img{
+transform:scale(1.05);
 }
 
 /* Navigation */
@@ -46,9 +52,16 @@ font-size:0.95rem;
 }
 
 .logo {
-    color: white;
-    font-weight: bold;
-    font-size: 1.4rem;
+color:white;
+font-weight:bold;
+font-size:1.4rem;
+cursor:pointer;
+transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.logo:hover{
+transform:scale(1.1) rotate(-3deg);
+color:#3b82f6;
 }
 
 .nav-links a {
@@ -90,6 +103,13 @@ gap:20px;
 padding:40px 20px;
 }
 
+/* Makes the entire card clickable without changing styling */
+.card-link{
+text-decoration:none;
+color:inherit;
+display:block;
+}
+
 .card {
 background:white;
 padding:20px;
@@ -97,6 +117,14 @@ border-radius:8px;
 box-shadow:0 4px 10px rgba(0,0,0,0.05);
 flex:1 1 280px;
 max-width:350px;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+cursor:pointer;
+}
+
+/* Card hover animation */
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 12px 20px rgba(0,0,0,0.15);
 }
 
 /* About Page */
