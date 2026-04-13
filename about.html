@@ -30,9 +30,30 @@
     </nav>
 </header>
 
-<main>
+<main class="about-layout">
 
-<section class="about-section">
+<form id="signupForm">
+  <h2>Join NextDev</h2>
+
+  <label for="username">Username</label>
+  <input type="text" id="username" />
+
+  <label for="email">Email</label>
+  <input type="text" id="email" />
+
+  <label for="password">Password</label>
+  <input type="password" id="password" />
+
+  <label for="confirmPassword">Confirm Password</label>
+  <input type="password" id="confirmPassword" />
+
+  <button type="submit">Sign Up</button>
+
+  <p id="errorMsg" style="color:red;"></p>
+  <p id="successMsg" style="color:green;"></p>
+</form>
+
+<section class="right-panel about-section">
     <h1>About NextDev</h1>
     <p>
 Welcome to NextDev, your guide to becoming a successful web developer.
@@ -52,6 +73,46 @@ of web development through accessible and modern education.
 <footer>
     <p>© 2026 NextDev</p>
 </footer>
+
+<script>
+document.getElementById("signupForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    let username = document.getElementById("username").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let password = document.getElementById("password").value;
+    let confirmPassword = document.getElementById("confirmPassword").value;
+
+    let errorMsg = document.getElementById("errorMsg");
+    let successMsg = document.getElementById("successMsg");
+
+    errorMsg.textContent = "";
+    successMsg.textContent = "";
+
+    // Validation checks
+    if (username === "" || email === "" || password === "" || confirmPassword === "") {
+        errorMsg.textContent = "All fields are required.";
+        return;
+    }
+
+    if (!email.includes("@") || !email.includes(".")) {
+        errorMsg.textContent = "Please enter a valid email.";
+        return;
+    }
+
+    if (password.length < 6) {
+        errorMsg.textContent = "Password must be at least 6 characters.";
+        return;
+    }
+
+    if (password !== confirmPassword) {
+        errorMsg.textContent = "Passwords do not match.";
+        return;
+    }
+
+    successMsg.textContent = "Account created successfully!";
+});
+</script>
 
 </body>
 </html>

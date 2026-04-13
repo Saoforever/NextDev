@@ -272,6 +272,10 @@ body{
 font-size:16px;
 }
 
+.navbar {
+  margin-bottom: 40px;
+}
+
 .navbar{
 flex-direction:column;
 align-items:flex-start;
@@ -317,4 +321,66 @@ background:#f0f4ff;
 flex-direction:column;
 }
 
+}
+
+#signupForm {
+  width: 100%;
+  max-width: 320px;
+  padding: 25px;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+#signupForm input {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0 15px 0;
+}
+
+#signupForm button {
+  width: 100%;
+  padding: 10px;
+  background: #222;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#signupForm button:hover {
+  background: #444;
+}
+
+#signupForm {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.about-layout {
+  display: flex;
+  gap: 40px;
+  padding: 60px 40px;
+  align-items: flex-start;
+}
+
+.left-panel {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.right-panel {
+  flex: 1;
+}
+
+@media (max-width: 900px) {
+  .about-layout {
+    flex-direction: column;
+  }
+
+  .left-panel,
+  .right-panel {
+    width: 100%;
+  }
 }
